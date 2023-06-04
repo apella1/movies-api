@@ -14,7 +14,7 @@ import java.util.List;
 @Data // handling getters and setters
 @AllArgsConstructor
 @NoArgsConstructor
-public class Movies {
+public class Movie {
     @Id
     private ObjectId id;
     private String imdbId;

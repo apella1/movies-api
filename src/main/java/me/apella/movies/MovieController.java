@@ -1,6 +1,5 @@
 package me.apella.movies;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,13 +17,13 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
     @GetMapping
-    public ResponseEntity<List<Movies>> getAllMovies() {
-        return new ResponseEntity<List<Movies>>(movieService.allMovies(), HttpStatus.OK);
+    public ResponseEntity<List<Movie>> getAllMovies() {
+        return new ResponseEntity<List<Movie>>(movieService.allMovies(), HttpStatus.OK);
     }
 
    @GetMapping("/{imdbId}")
-    public ResponseEntity<Optional<Movies>> getSingleMovie(@PathVariable String imdbId) {
-        return new ResponseEntity<Optional<Movies>>(movieService.singleMovie(imdbId), HttpStatus.OK);
+    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String imdbId) {
+        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
    }
 }
 
