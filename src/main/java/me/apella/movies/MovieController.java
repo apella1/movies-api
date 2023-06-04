@@ -22,9 +22,9 @@ public class MovieController {
         return new ResponseEntity<List<Movies>>(movieService.allMovies(), HttpStatus.OK);
     }
 
-   @GetMapping("/{id}")
-    public ResponseEntity<Optional<Movies>> getSingleMovie(@PathVariable ObjectId id) {
-        return new ResponseEntity<Optional<Movies>>(movieService.singleMovie(id), HttpStatus.OK);
+   @GetMapping("/{imdbId}")
+    public ResponseEntity<Optional<Movies>> getSingleMovie(@PathVariable String imdbId) {
+        return new ResponseEntity<Optional<Movies>>(movieService.singleMovie(imdbId), HttpStatus.OK);
    }
 }
 
