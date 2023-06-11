@@ -1,4 +1,4 @@
-package me.apella.movies;
+package me.apella.movies.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

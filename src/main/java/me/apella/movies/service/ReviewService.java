@@ -1,5 +1,8 @@
-package me.apella.movies;
+package me.apella.movies.service;
 
+import me.apella.movies.entity.Movie;
+import me.apella.movies.entity.Review;
+import me.apella.movies.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

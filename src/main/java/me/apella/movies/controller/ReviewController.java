@@ -1,5 +1,7 @@
-package me.apella.movies;
+package me.apella.movies.controller;
 
+import me.apella.movies.entity.Review;
+import me.apella.movies.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

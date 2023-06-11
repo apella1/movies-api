@@ -1,5 +1,7 @@
-package me.apella.movies;
+package me.apella.movies.service;
 
+import me.apella.movies.entity.Movie;
+import me.apella.movies.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
