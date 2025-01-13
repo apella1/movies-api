@@ -1,11 +1,7 @@
 package me.apella.movies.repository;
 
 import me.apella.movies.entity.Review;
-import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface ReviewRepository extends MongoRepository<Review, ObjectId> {
-
+public interface ReviewRepository extends JpaRepository<Review, Long> {
 }

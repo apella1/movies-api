@@ -1,16 +1,10 @@
 package me.apella.movies.repository;
 
 import me.apella.movies.entity.Movie;
-import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-// data access layer
-@Repository
-public interface MovieRepository extends MongoRepository<Movie, ObjectId> {
+public interface MovieRepository extends JpaRepository<Movie, Long> {
     Optional<Movie> findMovieByImdbId(String imdbId);
-
-
 }

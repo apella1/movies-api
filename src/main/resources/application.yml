@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: movies
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    generate-ddl: true
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
