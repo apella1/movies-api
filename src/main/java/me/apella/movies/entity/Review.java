@@ -14,8 +14,6 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String body;
-
-    public Review(String body) {
-        this.body = body;
-    }
+    @ManyToOne
+    private Movie movie;
 }
