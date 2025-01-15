@@ -23,6 +23,6 @@ public class Movie {
     private String releaseDate;
     private String trailerLink;
     private String poster;
-    @OneToMany
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Review> reviews;
 }
