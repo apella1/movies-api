@@ -14,8 +14,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String body;
-
-    public Review(String body) {
-        this.body = body;
-    }
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(nullable = false, foreignKey = @ForeignKey(name = "fk_review_movie"))
+    private Movie movie;
 }

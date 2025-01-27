@@ -1,5 +1,6 @@
 package me.apella.movies.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import me.apella.movies.entity.Movie;
 import me.apella.movies.service.MovieService;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/movies")
+@Tag(name = "Movies", description = "Endpoints for showing movies information.")
 public class MovieController {
     private final MovieService movieService;
 
@@ -23,7 +25,7 @@ public class MovieController {
 
     @GetMapping
     public ResponseEntity<List<Movie>> getAllMovies() {
-        return new ResponseEntity<>(movieService.allMovies(), HttpStatus.OK);
+        return new ResponseEntity<>(movieService.findAllMovies(), HttpStatus.OK);
     }
 
     @GetMapping("/{imdbId}")
