@@ -1,4 +1,6 @@
 logging:
   level:
     org:
-      springframework: DEBUG
+      springframework:
+        security: trace
+        web: info
